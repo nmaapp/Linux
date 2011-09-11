@@ -1,0 +1,7 @@
+[default]
+# Generate an index. Lets you play incomplete video files. 
+idx=yes
+forceidx=yes
+
+[gnome-mplayer]
+msglevel=all=5
