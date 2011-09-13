@@ -3,5 +3,9 @@
 idx=yes
 forceidx=yes
 
+# Increase the total volume above the sound card level.
+softvol=1
+softvol-max=600
+
 [gnome-mplayer]
 msglevel=all=5
