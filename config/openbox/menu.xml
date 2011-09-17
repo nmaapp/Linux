@@ -18,6 +18,13 @@
 			</item>
 		</menu>
 		<menu id="root-menu-525118" label="Openbox Config">
+			<item label="Edit rc.xml">
+				<action name="Execute">
+					<execute>
+						leafpad ~/.config/openbox/rc.xml
+					</execute>
+				</action>
+			</item>
 			<item label="Edit autostart">
 				<action name="Execute">
 					<execute>

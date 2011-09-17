@@ -876,7 +876,12 @@
     <maximized>true</maximized>
     # 'Horizontal', 'Vertical' or boolean (yes/no)
   </application>
-
+  <application class="*">
+    <maximized>yes</maximized>
+  </application>
+  <application type="dialog">
+    <maximized>no</maximized>
+  </application>
   # end of the example
 -->
   </applications>
