@@ -1,0 +1,9 @@
+adeskbar &
+conky -q &
+nitrogen --restore &
+#start-pulseaudio-x11 & 
+pnmixer &
+fbxkb &
+batti &
+dropboxd &
+blueman-applet &
