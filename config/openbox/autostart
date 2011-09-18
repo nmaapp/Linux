@@ -1,9 +1,7 @@
 adeskbar &
 conky -q &
+ossxmix -b &
 nitrogen --restore &
-#start-pulseaudio-x11 & 
-pnmixer &
-fbxkb &
-batti &
-dropboxd &
-blueman-applet &
+xbacklight -set 100 &
+#/usr/bin/synclient TouchpadOff=1 &
+vattery &

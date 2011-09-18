@@ -272,7 +272,7 @@
     </keybind>
     <keybind key="W-w">
       <action name="Execute">
-        <command>chromium-browser</command>
+        <command>chromium</command>
         <startupnotify>
           <enabled>yes</enabled>
           <name>Chromium Web Browser</name>
@@ -403,41 +403,6 @@
     </keybind>
     <keybind key="A-Left">
       <action name="DirectionalFocusWest"/>
-    </keybind>
-    <keybind key="XF86AudioRaiseVolume">
-      <action name="Execute">
-        <command>amixer -D pulse set Master 5%+ unmute</command>
-      </action>
-    </keybind>
-    <keybind key="XF86AudioLowerVolume">
-      <action name="Execute">
-        <command>amixer -D pulse set Master 5%- unmute</command>
-      </action>
-    </keybind>
-    <keybind key="XF86AudioMute">
-      <action name="Execute">
-        <command>amixer -q set Master toggle</command>
-      </action>
-    </keybind>
-    <keybind key="XF86ScreenSaver">
-      <action name="Execute">
-        <command>slimlock</command>
-      </action>
-    </keybind>
-    <keybind key="W-s">
-      <action name="Execute">
-        <command>skype</command>
-      </action>
-    </keybind>
-    <keybind key="W-z">
-      <action name="Execute">
-        <command>zim</command>
-      </action>
-    </keybind>
-    <keybind key="XF86PowerOff">
-      <action name="Execute">
-        <command>oblogout</command>
-      </action>
     </keybind>
   </keyboard>
   <mouse>
@@ -876,12 +841,7 @@
     <maximized>true</maximized>
     # 'Horizontal', 'Vertical' or boolean (yes/no)
   </application>
-  <application class="*">
-    <maximized>yes</maximized>
-  </application>
-  <application type="dialog">
-    <maximized>no</maximized>
-  </application>
+
   # end of the example
 -->
   </applications>
