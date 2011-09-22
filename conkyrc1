@@ -18,7 +18,7 @@ draw_graph_borders no
 default_color white
 default_shade_color 000000
 default_outline_color d9d7d6
-alignment tr
+alignment tl
 gap_x 12
 gap_y 50
 no_buffers yes
@@ -34,18 +34,12 @@ TEXT
 ${color}CPU ${if_match ${cpu} >0}${color1}${else}${color2}${endif}O${if_match ${cpu} >10}${color1}${else}${color2}${endif}O${if_match ${cpu} >20}${color1}${else}${color2}${endif}O${if_match ${cpu} >30}${color1}${else}${color2}${endif}O${if_match ${cpu} >40}${color1}${else}${color2}${endif}O${if_match ${cpu} >50}${color1}${else}${color2}${endif}O${if_match ${cpu} >60}${color1}${else}${color2}${endif}O${if_match ${cpu} >70}${color1}${else}${color2}${endif}O${if_match ${cpu} >80}${color1}${else}${color2}${endif}O${if_match ${cpu} >90}${color1}${else}${color2}${endif}O   ${color}RAM ${if_match ${memperc} >0}${color1}${else}${color2}${endif}O${if_match ${memperc} >10}${color1}${else}${color2}${endif}O${if_match ${memperc} >20}${color1}${else}${color2}${endif}O${if_match ${memperc} >30}${color1}${else}${color2}${endif}O${if_match ${memperc} >40}${color1}${else}${color2}${endif}O${if_match ${memperc} >50}${color1}${else}${color2}${endif}O${if_match ${memperc} >60}${color1}${else}${color2}${endif}O${if_match ${memperc} >70}${color1}${else}${color2}${endif}O${if_match ${memperc} >80}${color1}${else}${color2}${endif}O${if_match ${memperc} >90}${color1}${else}${color2}${endif}O
 
 SHORTCUT KEYS ${hr 2}
-Alt+F2$alignr Run Dialog
-Super+space$alignr Preferences
-Super+t$alignr Terminal
-Super+f$alignr File Manager
-Super+e$alignr Editor
-Super+m$alignr Media Player
-Super+s$alignr Skype
-Super+z$alignr Zim
-Super+w$alignr Web Browser
-Super+g$alignr Character Map
-${if_existing /home/robert/.screensaver}Super+Shift+s$alignr Screensaver off${else}Super+Shift+s$alignr Screensaver on${endif}
-Super+x$alignr Tiling Keybinds
-Super+u$alignr System Upgrade
-Super+l$alignr Logout
-Super+q$alignr Force Quit
+Super+a$alignr Toggle Maximize
+Super+d$alignr Toggle Minimize
+Super+h$alignr Toggle Horizontal
+Super+v$alignr Toggle Vertical
+Super+c$alignr Move to Center
+Super+Arrow$alignr Move
+Alt+Super+Arrow$alignr Resize
+Alt+Arrow$alignr Focus
+Super+x$alignr Classic Keybinds
