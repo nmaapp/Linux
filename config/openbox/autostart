@@ -1,7 +1,8 @@
 adeskbar &
 conky -q &
-ossxmix -b &
 nitrogen --restore &
-xbacklight -set 100 &
-#/usr/bin/synclient TouchpadOff=1 &
-vattery &
+pnmixer &
+fbxkb &
+batti &
+dropboxd &
+blueman-applet &

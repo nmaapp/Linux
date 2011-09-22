@@ -27,11 +27,11 @@
     <center>yes</center>
     <!-- whether to place windows in the center of the free area found or
        the top left corner -->
-    <monitor>Active</monitor>
+    <monitor>2</monitor>
     <!-- with Smart placement on a multi-monitor system, try to place new windows
        on: 'Any' - any monitor, 'Mouse' - where the mouse is, 'Active' - where
        the active window is -->
-    <primaryMonitor>1</primaryMonitor>
+    <primaryMonitor>2</primaryMonitor>
     <!-- The monitor where Openbox should place popup dialogs such as the
        focus cycling popup, or the desktop switch popup.  It can be an index
        from 1, specifying a particular monitor.  Or it can be one of the
@@ -272,7 +272,7 @@
     </keybind>
     <keybind key="W-w">
       <action name="Execute">
-        <command>chromium</command>
+        <command>chromium-browser</command>
         <startupnotify>
           <enabled>yes</enabled>
           <name>Chromium Web Browser</name>
@@ -403,6 +403,66 @@
     </keybind>
     <keybind key="A-Left">
       <action name="DirectionalFocusWest"/>
+    </keybind>
+    <keybind key="XF86AudioRaiseVolume">
+      <action name="Execute">
+        <command>amixer -D pulse set Master 5%+ unmute</command>
+      </action>
+    </keybind>
+    <keybind key="XF86AudioLowerVolume">
+      <action name="Execute">
+        <command>amixer -D pulse set Master 5%- unmute</command>
+      </action>
+    </keybind>
+    <keybind key="XF86AudioMute">
+      <action name="Execute">
+        <command>amixer -q set Master toggle</command>
+      </action>
+    </keybind>
+    <keybind key="XF86ScreenSaver">
+      <action name="Execute">
+        <command>slimlock</command>
+      </action>
+    </keybind>
+    <keybind key="W-s">
+      <action name="Execute">
+        <command>skype</command>
+      </action>
+    </keybind>
+    <keybind key="W-z">
+      <action name="Execute">
+        <command>zim</command>
+      </action>
+    </keybind>
+    <keybind key="XF86PowerOff">
+      <action name="Execute">
+        <command>oblogout</command>
+      </action>
+    </keybind>
+    <keybind key="S-W-s">
+      <action name="Execute">
+        <command>/media/personal/robert/src/screensaver.sh</command>
+      </action>
+    </keybind>
+    <keybind key="XF86AudioPlay">
+      <action name="Execute">
+        <command>deadbeef --play-pause</command>
+      </action>
+    </keybind>
+    <keybind key="XF86AudioStop">
+      <action name="Execute">
+        <command>deadbeef --stop</command>
+      </action>
+    </keybind>
+    <keybind key="XF86AudioPrev">
+      <action name="Execute">
+        <command>deadbeef --prev</command>
+      </action>
+    </keybind>
+    <keybind key="XF86AudioNext">
+      <action name="Execute">
+        <command>deadbeef --next</command>
+      </action>
     </keybind>
   </keyboard>
   <mouse>
@@ -841,8 +901,32 @@
     <maximized>true</maximized>
     # 'Horizontal', 'Vertical' or boolean (yes/no)
   </application>
-
   # end of the example
 -->
+  <application class="*">
+    <position>
+      <monitor>1</monitor>
+    </position>
+    <focus>yes</focus>
+    <maximized>no</maximized>
+  </application>
+  <application class="Chrome">
+    <maximized>yes</maximized>
+  </application>
+  <application class="Zathura">
+    <maximized>yes</maximized>
+  </application>
+  <application class="Gvim">
+    <maximized>yes</maximized>
+  </application>
+  <application title="* - Inkscape">
+    <maximized>yes</maximized>
+  </application>
+  <application class="Geeqie">
+    <maximized>yes</maximized>
+  </application>
+  <application type="dialog">
+    <maximized>no</maximized>
+  </application>
   </applications>
 </openbox_config>
