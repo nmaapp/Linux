@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Encoding=UTF-8
+Exec=ln -s %f /media/personal/robert/Dropbox/Public
+Icon=/usr/share/icons/AwOkenDark/clear/24x24/apps/dropbox.png
+Name=Dropbox Public
