@@ -1,8 +1,0 @@
-adeskbar &
-conky -q &
-nitrogen --restore &
-pnmixer &
-fbxkb &
-batti &
-dropboxd &
-blueman-applet &

@@ -1,0 +1,13 @@
+#
+# ~/.bashrc
+#
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+alias ls='ls --color=auto'
+PS1='[\u@\h \W]\$ '
+
+# Enable the following to remove all files except with the pattern rm !(except_file1|except_file2)
+# See also http://superuser.com/questions/231718/remove-all-files-except-for-a-few-from-a-folder-in-unix
+shopt -s extglob
