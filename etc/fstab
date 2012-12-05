@@ -9,4 +9,5 @@
 UUID=469ca819-9b4d-48d1-b9f9-7377f47ff722 / ext4 defaults 0 1
 UUID=732ac739-0110-4554-b86d-4d7413e89995 swap swap defaults 0 0
 UUID=a390d1a9-fb13-4895-8297-03dba4cd6162 /home ext4 defaults 0 1
-UUID=01CD2ABB65E17DE0 /run/media/orschiro/Windows ntfs-3g uid=orschiro,gid=users,umask=0022 0 0
+# Mount internal windows partition with linux compatible permissions, i.e. 755 for directories (dmask=022) and 644 for files (fmask=133)
+UUID=01CD2ABB65E17DE0 /run/media/orschiro/Windows ntfs-3g uid=orschiro,gid=users,dmask=022,fmask=133 0 0
