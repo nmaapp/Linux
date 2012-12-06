@@ -11,7 +11,7 @@ arch=('any')
 depends=('cinnamon')
 conflicts=('cinnamon-theme-minty')
 source=("https://www.dropbox.com/s/hhejd1z20ldazb6/cinnamon-theme-minty-arch.zip")
-md5sums=('2d9de3221a0b978695a014da8bdd0579')
+md5sums=('f937705374ad9d1a5b31c93b3977ee85')
 
 package() {
   find Minty/ -type f -exec install -Dm644 '{}' "$pkgdir/usr/share/themes/{}" \;
