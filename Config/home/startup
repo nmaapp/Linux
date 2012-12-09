@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Reset keyboard options
+setxkbmap -option ""
+# Set layout
+setxkbmap -layout "us,pl,de"
+# Set international keyboard
+setxkbmap -model "pc105"
+# Use alt-shift to switch layout
+setxkbmap -option "grp:alt_shift_toggle"

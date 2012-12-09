@@ -1,0 +1,16 @@
+[Unit]
+Description=Run custom user autostart script located in ~/ on boot and resume from suspension and hibernation
+After=basic.target
+After=suspend.target
+After=hibernate.target
+
+[Service]
+User=orschiro
+Environment=DISPLAY=:0
+ExecStartPre=/usr/bin/sleep 60
+ExecStart=/home/orschiro/.autostart
+
+[Install]
+WantedBy=basic.target
+WantedBy=suspend.target
+WantedBy=hibernate.target
