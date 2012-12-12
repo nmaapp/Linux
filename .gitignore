@@ -1,5 +1,4 @@
 *.exe
-*.air
 *.pkg.tar.xz
 pkg/
 src/
