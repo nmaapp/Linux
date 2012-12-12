@@ -5,7 +5,8 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-alias ls='ls --color=auto'
+alias ls='ls -la --color=auto'
+
 PS1='[\u@\h \W]\$ '
 
 # Enable the following to remove all files except with the pattern rm !(except_file1|except_file2)
@@ -20,6 +21,18 @@ ffmpeg -i $1 -c:v libx264 -crf 18 -preset slow -pix_fmt yuv420p -c:a copy $2.mkv
 }
 alias ytconvert=youtubeConvert
 
+# Prezi
+preziDesktop()
+{
+currentDate=$(date +"%m/%d/%Y")
+echo $currentDate
+sudo date -d 02/26/2012
+prezi-desktop 
+sleep 15
+sudo date -d $currentDate
+}
+#alias prezi-desktop=preziDesktop
+
 # Fix line wrap on window resize
 shopt -s checkwinsize
 
@@ -29,3 +42,6 @@ shopt -s checkwinsize
 
 # Quick path for internal Windows partition
 windows=/run/media/orschiro/Windows/Users/Robert
+
+# Yaourt AUR Update 
+alias update='yaourt -Syua'
