@@ -1,4 +1,5 @@
-The subdirectory `Packages/` mostly contains packages for Arch Linux, some of which are published on [AUR](https://aur.archlinux.org/packages/?SeB=m&K=orschiro). The subdirectory `Config` contains all custom dotfiles that I am currently using on my Thinkpad X200T. These config files are versatile and can be used on other laptops alike.
+# Introduction
+The subdirectory `Packages/` mostly contains packages for Arch Linux, some of which are published on [AUR](https://aur.archlinux.org/packages/?SeB=m&K=orschiro). The subdirectory `Config/` contains all custom dotfiles that I am currently using on my Thinkpad X200T. These config files are versatile and can be used on other laptops alike.
 
 # Config files description
 ## /etc/power.d/00-brightness
