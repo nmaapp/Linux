@@ -9,9 +9,10 @@ pkgdesc="Prezi Desktop is a presentation software giving you all the power of Pr
 url=('https://prezi.com/desktop/')
 source=("http://cdn01.prezi.com/prezi/desktop/PreziDesktop_3.091.air" 'prezi-desktop.desktop')
 noextract=("PreziDesktop_$pkgver.air")
+conflicts=('prezi-desktop4')
 depends=('bash' 'adobe-air-sdk' 'unzip')
 md5sums=('6cb85fe0ec6ea727862cd32d50d5d7df'
-         '32d2d5c162de4d0cd3198a096bcce8cb')
+         'cd029f5631f04da850822143753f5d65')
 
 package() {
   cd "${srcdir}"

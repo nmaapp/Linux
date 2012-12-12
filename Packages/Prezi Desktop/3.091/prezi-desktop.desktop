@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=Prezi Desktop
 Exec=/usr/bin/prezi-desktop
-Comment=An application for creating mockups
+Comment=An application for creating canvas presentations
 Type=Application
 StartupNotify=true
 Path=/opt/airapps/prezi-desktop

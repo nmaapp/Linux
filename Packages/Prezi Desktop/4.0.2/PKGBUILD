@@ -1,6 +1,7 @@
 # Maintainer: Robert Orzanna <orschiro@gmail.com>"
 
-pkgname='prezi-desktop'
+pkgname='prezi-desktop4'
+_pkgname='prezi-desktop'
 pkgver=4.0.2
 license=('custom')
 pkgrel=1
@@ -9,9 +10,10 @@ pkgdesc="Prezi Desktop is a presentation software giving you all the power of Pr
 url=('https://prezi.com/desktop/')
 source=("https://github.com/orschiro/Linux/blob/master/Packages/Prezi%20Desktop/4.0.2/PreziDesktop_4.0.2.air" 'prezi-desktop.desktop')
 noextract=("PreziDesktop_$pkgver.air")
+conflicts=('prezi-desktop')
 depends=('bash' 'adobe-air-sdk' 'unzip')
-md5sums=('60904a8c40d4bfcdee5ddcea46ec6a35'
-         '32d2d5c162de4d0cd3198a096bcce8cb')
+md5sums=('5af76b23bbcf5162d184eaf1393f26d9'
+         '28622b95ca914e526f194962335614c0')
 
 package() {
   cd "${srcdir}"
@@ -27,5 +29,5 @@ package() {
   echo "/opt/adobe-air-sdk/bin/adl -nodebug /opt/airapps/prezi-desktop/META-INF/AIR/application.xml /opt/airapps/prezi-desktop/" >> "${pkgdir}"/usr/bin/prezi-desktop
   chmod +x "${pkgdir}"/usr/bin/prezi-desktop
   mkdir -p "${pkgdir}"/usr/share/applications
-  install "${srcdir}"/${pkgname}.desktop "${pkgdir}"/usr/share/applications/ 
+  install "${srcdir}"/${_pkgname}.desktop "${pkgdir}"/usr/share/applications/ 
 }
