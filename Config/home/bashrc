@@ -36,10 +36,6 @@ sudo date -d $currentDate
 # Fix line wrap on window resize
 shopt -s checkwinsize
 
-# autojump settings
-# See https://aur.archlinux.org/packages/autojump-git
-[[ -s /etc/profile.d/autojump.sh ]] && . /etc/profile.d/autojump.sh
-
 # Quick path for internal Windows partition
 windows=/run/media/orschiro/Windows/Users/Robert
 
