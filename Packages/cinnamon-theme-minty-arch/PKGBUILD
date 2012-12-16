@@ -10,7 +10,7 @@ arch=('any')
 depends=('cinnamon')
 conflicts=('cinnamon-theme-minty')
 source=("https://github.com/orschiro/Linux/blob/master/Packages/cinnamon-theme-minty-arch/cinnamon-theme-minty-arch.zip")
-md5sums=('f937705374ad9d1a5b31c93b3977ee85')
+md5sums=('5fe28beea33ee69b0ab1e0f92355a7af')
 
 package() {
   find Minty/ -type f -exec install -Dm644 '{}' "$pkgdir/usr/share/themes/{}" \;
