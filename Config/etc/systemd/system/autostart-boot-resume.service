@@ -7,7 +7,7 @@ After=hibernate.target
 [Service]
 User=orschiro
 Environment=DISPLAY=:0
-ExecStart=/home/orschiro/.scripts/autostart
+ExecStart=/usr/local/bin/autostart
 
 [Install]
 WantedBy=basic.target
