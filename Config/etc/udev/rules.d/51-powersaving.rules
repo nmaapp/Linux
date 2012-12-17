@@ -1,2 +1,0 @@
-SUBSYSTEM=="power_supply", ENV{POWER_SUPPLY_ONLINE}=="0", RUN+="/home/orschiro/.scripts/powersaving battery"
-SUBSYSTEM=="power_supply", ENV{POWER_SUPPLY_ONLINE}=="1", RUN+="/home/orschiro/.scripts/powersaving AC"
