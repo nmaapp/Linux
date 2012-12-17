@@ -2,11 +2,53 @@
 
 case $1 in
     battery)
-    echo "Enable screen power saving"
-    echo 5 > /sys/class/backlight/acpi_video0/device/backlight/acpi_video0/brightness
+		# cpu
+		for i in /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor; do echo powersave > $i; done
+		
+		# aspm
+		echo powersave > /sys/module/pcie_aspm/parameters/policy
+		
+		# kernel write mode
+		echo 5 > /proc/sys/vm/laptop_mode
+		echo 90 > /proc/sys/vm/dirty_ratio
+		echo 1 > /proc/sys/vm/dirty_background_ratio
+		echo 60000 > /proc/sys/vm/dirty_expire_centisecs
+		echo 60000 > /proc/sys/vm/dirty_writeback_centisecs
+		
+		# disk powersave
+		hdparm -S 6 -B 254 -a 2048 /dev/sda &> /dev/null
+		for i in /sys/class/scsi_host/host*/link_power_management_policy; do echo min_power > $i; done
+		
+		# sound card powersave
+		echo 1 > /sys/module/snd_hda_intel/parameters/power_save
+		echo Y > /sys/module/snd_hda_intel/parameters/power_save_controller
+		
+		# screen power saving"
+		echo 5 > /sys/class/backlight/acpi_video0/device/backlight/acpi_video0/brightness
     ;;
     AC)
-    echo "Disable screen power saving"
-    echo 14 > /sys/class/backlight/acpi_video0/device/backlight/acpi_video0/brightness
+	 	# cpu
+		for i in /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor; do echo ondemand > $i; done
+		
+		# aspm
+		echo default > /sys/module/pcie_aspm/parameters/policy
+		
+		# kernel write mode
+		echo 0 > /proc/sys/vm/laptop_mode
+		echo 30 > /proc/sys/vm/dirty_ratio
+		echo 30 > /proc/sys/vm/dirty_background_ratio
+		echo 600 > /proc/sys/vm/dirty_expire_centisecs
+		echo 600 > /proc/sys/vm/dirty_writeback_centisecs
+		
+		# disk powersave
+		hdparm -S 0 -B 254 -a 2048 /dev/sda &> /dev/null
+		for i in /sys/class/scsi_host/host*/link_power_management_policy; do echo max_performance > $i; done
+		
+		# sound card powersave
+		echo 0 > /sys/module/snd_hda_intel/parameters/power_save
+		echo Y > /sys/module/snd_hda_intel/parameters/power_save_controller
+	    
+	    # screen power saving
+	    echo 14 > /sys/class/backlight/acpi_video0/device/backlight/acpi_video0/brightness
     ;;
 esac
