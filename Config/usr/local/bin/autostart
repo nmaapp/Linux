@@ -9,10 +9,19 @@ do
 	X=$( pidof X )
 done
 
-echo "Running autostart in 5 seconds..."
+echo "Running autostart in 30 seconds..."
 
-# Wait 5 seconds on resume before running.
-sleep 5
+# Wait 30 seconds on resume before running.
+sleep 30
+
+# Run powersaving script
+AC=$( cat /sys/class/power_supply/AC/online )
+
+if [ $AC = "1" ]; then
+    /usr/local/bin/powersaving AC
+else
+    /usr/local/bin/powersaving battery
+fi
 
 # Reset keyboard options
 setxkbmap -option ""
