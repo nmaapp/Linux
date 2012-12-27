@@ -11,6 +11,6 @@ case $1 in
 		echo "Running powersaving on AC"
 	    
 		# screen power saving
-		xbacklight -set 86.666667
+		xbacklight -set 94
     ;;
 esac
