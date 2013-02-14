@@ -1,0 +1,2 @@
+#!/bin/bash
+/opt/adobe-air-sdk/bin/adl -nodebug /opt/airapps/prezi-desktop/META-INF/AIR/application.xml /opt/airapps/prezi-desktop/

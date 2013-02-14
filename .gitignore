@@ -1,13 +1,21 @@
-# Ignore everything 
-*
+# Ignore everything except
+/*
 
-# But not not
-!Backup/etc/systemd
-!Backup/etc/tmpfiles.d
-!Backup/etc/udev
-!Backup/etc/fstab
+!.gitignore
 !.bashrc
 !.gtkrc-2.0
 !.xinitrc
+!Backup/
 !Packages/
 !Scripts/
+
+# Exclude everything in Backup except
+Backup/*
+!Backup/etc/
+
+# Exclude everything in Backup/etc except
+Backup/etc/*
+!Backup/etc/fstab
+!Backup/etc/systemd/
+!Backup/etc/tmpfiles.d/
+!Backup/etc/udev/

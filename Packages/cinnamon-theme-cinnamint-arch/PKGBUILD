@@ -1,0 +1,17 @@
+# Contributor: orschiro@gmail.com
+
+pkgname=cinnamon-theme-cinnamint-arch
+pkgver=1.6
+pkgrel=1
+pkgdesc="Cinnamint Cinnamon theme with some flavour of Arch Linux colours"
+url="http://cinnamon-spices.linuxmint.com/themes/view/120"
+license=('GPL')
+arch=('any')
+depends=('cinnamon')
+conflicts=('')
+source=("cinnamint_arch.zip")
+md5sums=('f023910349e977080d6c08b533e0d6b2')
+
+package() {
+  find CinnamintArch/ -type f -exec install -Dm644 '{}' "$pkgdir/usr/share/themes/{}" \;
+}

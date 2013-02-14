@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding ="utf-8"?>
+<swc xmlns="http://www.adobe.com/flash/swccatalog/9">
+  <versions>
+    <swc version="1.2" />
+    <flex version="3.6.0" build="16995" />
+  </versions>
+  <features>
+    <feature-script-deps />
+    <feature-components />
+    <feature-files />
+  </features>
+  <components>
+    <component className="prezi.remoting:NativeJSEngine" name="NativeJSEngine" uri="http://www.airrt.com/extensions"  />
+  </components>
+  <libraries>
+    <library path="library.swf">
+      <script name="_a68337f1104aef00a09a4909630a1d32ac90e755d9edb833e75df1ab0b967ac3_flash_display_Sprite" mod="1352506824062" signatureChecksum="2846204774" >
+        <def id="_a68337f1104aef00a09a4909630a1d32ac90e755d9edb833e75df1ab0b967ac3_flash_display_Sprite" /> 
+        <dep id="flash.system:Security" type="e" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="flash.display:Sprite" type="i" /> 
+      </script>
+      <script name="prezi/remoting/NativeJSEngine" mod="1352459268000" signatureChecksum="2713409478" >
+        <def id="prezi.remoting:NativeJSEngine" /> 
+        <dep id="flash.external:ExtensionContext" type="e" /> 
+        <dep id="flash.external:ExtensionContext" type="s" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="Object" type="i" /> 
+      </script>
+      <digests>
+        <digest type="SHA-256" signed="false" value="e46e457d4765861b525cbc927b446e80c5f53e88a85d9dbe3a72c36282ecc1e2"   />
+      </digests>
+    </library>
+  </libraries>
+  <files>
+  </files>
+</swc>

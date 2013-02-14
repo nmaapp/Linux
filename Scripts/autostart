@@ -1,0 +1,33 @@
+#!/bin/bash
+
+# Wait until X server is running, indicated by a PID of XXX. Required only on first boot, not on resume.
+X=$( pidof X )
+
+while [ ${#X} != 3 ]
+do
+	sleep 10
+	X=$( pidof X )
+done
+
+echo "Running autostart in 30 seconds..."
+
+# Wait 30 seconds on resume before running.
+sleep 30
+
+# Run powersaving script
+AC=$( cat /sys/class/power_supply/AC/online )
+
+if [ $AC = "1" ]; then
+    /usr/local/bin/powersaving AC
+else
+    /usr/local/bin/powersaving battery
+fi
+
+# Reset keyboard options
+setxkbmap -option ""
+# Set layout
+setxkbmap -layout "us,pl,de"
+# Set international keyboard
+setxkbmap -model "pc105"
+# Use alt-shift to switch layout
+setxkbmap -option "grp:alt_shift_toggle"
