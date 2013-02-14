@@ -1,6 +1,13 @@
-*.exe
-*.pkg.tar.xz
-pkg/
-src/
-PreziDesktop_3.091.air
-Resources/
+# Ignore everything 
+*
+
+# But not not
+!Backup/etc/systemd
+!Backup/etc/tmpfiles.d
+!Backup/etc/udev
+!Backup/etc/fstab
+!.bashrc
+!.gtkrc-2.0
+!.xinitrc
+!Packages/
+!Scripts/
