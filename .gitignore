@@ -7,11 +7,11 @@
 !.xinitrc
 !Backup/
 !Packages/
-!Scripts/
 
 # Exclude everything in Backup except
 Backup/*
 !Backup/etc/
+!Backup/usr/
 
 # Exclude everything in Backup/etc except
 Backup/etc/*
@@ -19,3 +19,7 @@ Backup/etc/*
 !Backup/etc/systemd/
 !Backup/etc/tmpfiles.d/
 !Backup/etc/udev/
+
+# Exclude everything in Backup/usr except
+Backup/usr/*
+!Backup/usr/local
