@@ -11,7 +11,7 @@ It is usually safe to disable the nmi_watchdog which can otherwise cause frequen
 ## Backup/etc/fstab
 This file might only be of interest for you if you want to see an example how to mount internal windows partition with linux compatible permissions, i.e. 755 for directories (dmask=022) and 644 for files (fmask=133).
 
-# Scripts/
+# Scripts
 ## Backup/usr/local/bin/powersaving
 This is a simple case query which is run by the udev rule above. You may have to adapt the correct path and value of your brightness class.
 ## Backup/usr/local/bin/backup
