@@ -26,4 +26,4 @@ Backup/usr/*
 
 # Exclude everything in Backup/usr/local except
 Backup/usr/local/*
-!Backup/usr/local/bin
+!Backup/usr/local/bin/
