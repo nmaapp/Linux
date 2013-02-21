@@ -23,3 +23,7 @@ Backup/etc/*
 # Exclude everything in Backup/usr except
 Backup/usr/*
 !Backup/usr/local
+
+# Exclude everything in Backup/usr/local except
+Backup/usr/local/*
+!Backup/usr/local/bin
